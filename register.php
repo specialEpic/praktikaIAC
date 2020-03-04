@@ -8,7 +8,7 @@
 <body>
 <div class="main">
     <div class="bar">
-        <img src="logo.img" alt="logotip" class="logo">
+        <img src="logo.png" alt="logotip" class="logo">
     </div>
     <div class="glav">
         <h1>Регистрация</h1>

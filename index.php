@@ -8,7 +8,7 @@
 <body>
 <div class="main">
     <div class="bar">
-        <img src="logo.img" alt="logotip" class="logo">
+        <img src="logo.png" alt="logotip" class="logo">
     </div>
     <div class="glav">
         <h1>Для доступа на портал обратной связи пройдите авторизацию</h1>
