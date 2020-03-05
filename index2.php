@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once("mysitedb.php");   //подключение к бд
+require_once ("mail.php");
 if($_SESSION['login'])
 {
     echo "<a href='logout.php' class='a'>Выйти</a>";
@@ -25,7 +26,7 @@ echo "</div>";
         </div>
         <div class="glav">
             <h1>Вы можете связаться с нами с помощью формы ниже.</h1>
-            <form method="post">
+            <form method="post" action="mail.php">
                 <label>Тип обращения</label><br>
                 <select class="choose" required>
                     <option>Вопрос</option>
@@ -33,11 +34,14 @@ echo "</div>";
                     <option>Отзыв об услуге</option>
                 </select><br>
                 <label>Тема</label><br>
-                <input name="topic" required type="text" maxlength="75" value="Краткое описание обращения"><br>
+                <input name="topic" required type="text" maxlength="75" placeholder="Краткое описание обращения"><br>
                 <label>Текст обращения</label><br>
-                <input name="txt" required type="text" maxlength="1000" value="Писать можно когда угодно, главное - захотеть...">
+                <input name="txt" required type="text" maxlength="1000" placeholder="Писать можно когда угодно, главное - захотеть...">
             </form>
         </div>
     </div>
 </body>
 </html>
+
+<?php
+
