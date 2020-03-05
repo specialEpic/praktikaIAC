@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once("mysitedb.php");//подключение к бд
-if($_SESSION['login']) // если пользователь авторизован, то выводим его данные в поля для ввода
+require_once("mysitedb.php");   //подключение к бд
+if($_SESSION['login'])
 {
     echo "<a href='logout.php' class='a'>Выйти</a>";
 }
@@ -25,9 +25,18 @@ echo "</div>";
         </div>
         <div class="glav">
             <h1>Вы можете связаться с нами с помощью формы ниже.</h1>
-
-
-
+            <form method="post">
+                <label>Тип обращения</label><br>
+                <select class="choose" required>
+                    <option>Вопрос</option>
+                    <option>Предложение</option>
+                    <option>Отзыв об услуге</option>
+                </select><br>
+                <label>Тема</label><br>
+                <input name="topic" required type="text" maxlength="75" value="Краткое описание обращения"><br>
+                <label>Текст обращения</label><br>
+                <input name="txt" required type="text" maxlength="1000" value="Писать можно когда угодно, главное - захотеть...">
+            </form>
         </div>
     </div>
 </body>
